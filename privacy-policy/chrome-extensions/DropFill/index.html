@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>DropFill – Privacy Policy</title>
+  <meta name="description" content="DropFill processes your images, documents and data only on your computer. Nothing is uploaded.">
+  <style>
+    :root {
+      --bg: #f7f8fb; --surface: #fff; --text: #1b2130; --muted: #5d6779; --border: #e1e5ee;
+      --primary: #2563eb; --soft: #e8efff; --ok: #15803d;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #12151c; --surface: #1a1f29; --text: #e6e9ef; --muted: #a0a9b8; --border: #2f3746; --primary: #7aa2ff; --soft: #1f2d4d; --ok: #4ade80; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    header { background: linear-gradient(120deg, #1d4ed8, #4338ca); color: #fff; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+    header .wrap { padding-top: 34px; padding-bottom: 30px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; opacity: .95; }
+    .brand svg { width: 34px; height: 34px; }
+    h1 { font-size: 32px; line-height: 1.2; margin: 16px 0 6px; }
+    header p.updated { color: #fff; opacity: .85; margin: 0; font-size: 14px; }
+    main .wrap { padding-top: 26px; padding-bottom: 50px; }
+    .summary { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--ok); border-radius: 10px; padding: 16px 20px; margin-bottom: 26px; }
+    .summary strong { color: var(--ok); }
+    h2 { font-size: 21px; margin: 32px 0 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    code { background: var(--soft); border-radius: 5px; padding: 1px 6px; font-size: .92em; }
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 15px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { background: var(--soft); font-weight: 600; }
+    tr:last-child td { border-bottom: 0; }
+    a { color: var(--primary); }
+    footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 36px; padding-top: 16px; }
+    @media (max-width: 600px) { h1 { font-size: 26px; } table, thead, tbody, tr, th, td { display: block; } thead { display: none; } td { border-bottom: 0; padding: 4px 12px; } tr { border-bottom: 1px solid var(--border); padding: 8px 0; } td:first-child { font-weight: 600; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <rect x="4" y="4" width="120" height="120" rx="28" fill="#fff" fill-opacity=".18"/>
+          <rect x="36" y="16" width="56" height="30" rx="8" fill="#fff"/>
+          <path d="M64 50 v20 M50 60 L64 74 L78 60" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="20" y="80" width="88" height="30" rx="8" fill="#fff"/>
+          <rect x="32" y="87" width="5" height="16" rx="2" fill="#16a34a"/>
+        </svg>
+        DropFill
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 24 November 2026</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="summary">
+        <strong>In short: your data never leaves your computer.</strong>
+        DropFill reads your images, PDFs and files locally, keeps your data blocks in your own browser,
+        and has no analytics, tracking or advertising.
+      </div>
+
+      <p>DropFill is a Chrome extension that reads images, PDFs, JSON, CSV and text files on your computer and lets
+        you drag the extracted data into web forms. This policy explains what happens to your data.</p>
+
+      <h2>What DropFill processes</h2>
+      <ul>
+        <li><strong>Files, screenshots and text you give it</strong> (images, PDFs, JSON, CSV, TXT, pasted text,
+          captures of the current tab). They are processed entirely inside your browser: text recognition (OCR) runs
+          locally with Tesseract.js (WebAssembly) and PDFs are read locally with pdf.js.</li>
+        <li><strong>Form fields you drop data on.</strong> The content script only acts when you drop a DropFill block
+          onto a field; it writes the value into that field and nothing else. While the side panel is closed it shows a
+          small "DropFill" tab on the page edge to reopen it. It does not read, record or send the content of the pages
+          you visit.</li>
+      </ul>
+
+      <h2>What DropFill stores, and where</h2>
+      <p>All of the following stays on your computer or in your own Chrome profile:</p>
+      <table>
+        <thead><tr><th>Data</th><th>Where</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Extracted text and data blocks</td><td><code>chrome.storage.local</code></td><td>So the panel keeps your data when you close and reopen it. Delete it any time with "Clear all".</td></tr>
+          <tr><td>Source images (to select a region later)</td><td>The extension's IndexedDB</td><td>Deleted together with their group.</td></tr>
+          <tr><td>Downloaded OCR language data</td><td>The extension's IndexedDB</td><td>So languages work offline. Delete them in Settings.</td></tr>
+          <tr><td>Settings (drop behaviour, separator, date/number format, OCR languages, reminder on/off)</td><td><code>chrome.storage.sync</code></td><td>Chrome syncs them between your own signed-in browsers.</td></tr>
+          <tr><td>Number of successful fills</td><td><code>chrome.storage.local</code></td><td>Only used to show an occasional donation reminder. Never sent anywhere.</td></tr>
+        </tbody>
+      </table>
+      <p>Uninstalling the extension removes all of it.</p>
+
+      <h2>Network requests</h2>
+      <p>DropFill makes exactly one kind of network request: when you choose a new OCR language, it downloads that
+        language's data file (for example <code>vie.traineddata.gz</code>) from the public jsDelivr CDN
+        (<code>cdn.jsdelivr.net</code>, package <code>@tesseract.js-data</code>). This is a plain file download;
+        <strong>no images, documents, text or personal data are sent.</strong> English is bundled with the extension
+        and needs no download.</p>
+      <p>DropFill contains no analytics, no tracking, no advertising and no remote code.</p>
+
+      <h2>Clipboard</h2>
+      <p>DropFill writes to the clipboard only when you click a data block or its copy button, or when a value could
+        not be put into a field, so that you can paste it yourself. DropFill never reads your clipboard.</p>
+
+      <h2>Donations</h2>
+      <p>Donations are voluntary and handled entirely by the payment service you choose (PayPal or MoMo) in a normal
+        browser tab. DropFill does not know who donated, collects no email address and does not track clicks on donation
+        links. Donating does not unlock any feature.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><code>sidePanel</code> – show the DropFill panel next to the page.</li>
+        <li><code>storage</code> – keep your data blocks and settings (see the table above).</li>
+        <li><code>clipboardWrite</code> – copy a data block when you click it, and copy a value DropFill could not put
+          into a field so you can paste it yourself.</li>
+        <li><code>scripting</code> – after installation, add the drop handler to tabs that were already open, so you do
+          not have to reload them.</li>
+        <li>Access to all sites (<code>&lt;all_urls&gt;</code>) – so you can drop data into forms on any website
+          (including inside frames) and capture the visible tab when you click "Capture this tab".</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>DropFill is a general productivity tool and does not knowingly collect any data from anyone.</p>
+
+      <h2>Changes and contact</h2>
+      <p>If this policy changes, the new version will be published at the same address with a new date. For questions,
+        use the contact email shown on DropFill's Chrome Web Store page.</p>
+
+      <footer>DropFill is free. Optional support: the donation page inside the extension (PayPal or MoMo).</footer>
+    </div>
+  </main>
+</body>
+</html>
